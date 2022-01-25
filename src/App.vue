@@ -1,5 +1,6 @@
 <template>
   <div class="ctr">
+    <transition name="fade" mode="out-in">
     <questions
       v-if="questionAnswered < questions.length"
       :questions="questions"
@@ -7,6 +8,7 @@
       @selectedAnswer="selectedAnswer"
     />
     <result v-else :results="results" :correctAnswered="correctAnswered" />
+    </transition>
 
     <button
       type="button"
