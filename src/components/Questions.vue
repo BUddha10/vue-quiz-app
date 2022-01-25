@@ -11,6 +11,7 @@
         {{ questionAnswered }} out of {{ questions.length }} questions answered
       </div>
     </div>
+
     <div
       class="single-question"
       v-for="(question, qIndex) in questions"
